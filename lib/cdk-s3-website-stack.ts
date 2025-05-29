@@ -23,7 +23,7 @@ export class CdkS3WebsiteStack extends cdk.Stack {
 
     // Deploy the website content to the S3 bucket
     new s3deploy.BucketDeployment(this, 'DeployWebsite', {
-      sources: [s3deploy.Source.asset('./website')],
+      sources: [s3deploy.Source.asset('./website/dist')],
       destinationBucket: websiteBucket,
     });
 
