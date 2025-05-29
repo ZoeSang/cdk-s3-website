@@ -93,3 +93,23 @@ blockPublicAccess: new s3.BlockPublicAccess({
   restrictPublicBuckets: false
 })
 ```
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+1. **Main Branch Deployment**:
+   - Automatically deploys to production when changes are merged to the main branch
+   - Builds the React application and deploys the infrastructure using CDK
+   - Outputs the website URL after deployment
+
+2. **PR Preview Environments**:
+   - Creates a separate preview environment for each pull request
+   - Deploys a unique stack with its own S3 bucket
+   - Comments on the PR with the preview URL
+   - Automatically cleans up resources when PR is closed without merging
+
+3. **Required GitHub Secrets**:
+   - `AWS_ACCESS_KEY_ID`: AWS access key with permissions to deploy resources
+   - `AWS_SECRET_ACCESS_KEY`: Corresponding AWS secret key
+   - `AWS_REGION`: AWS region to deploy resources in
