@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Website to S3</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #232f3e;
+    }
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+    .aws-color {
+      color: #ff9900;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to my <span class="aws-color">AWS S3</span> Static Website</h1>
+    <p>This website is hosted on Amazon S3 and deployed using AWS CDK.</p>
+    <p>The site was successfully deployed from the website directory in the CDK project.</p>
+  </div>
+</body>
+</html>
