@@ -1,0 +1,9 @@
+version: 1.0
+analysis:
+  include:
+    - '**/*.ts'
+    - '**/*.js'
+  exclude:
+    - 'node_modules/**'
+    - 'cdk.out/**'
+    - 'dist/**'
